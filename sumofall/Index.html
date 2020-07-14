@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sum Of All Fears Exercise</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="../style/bootstrap.css" rel="stylesheet" />
+    <link href="css/prism.css" rel="stylesheet" />
+    <style>
+        #example-list {
+            background-color: tan;
+        }
+
+        #tacocatbackground {
+            width: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to left, #f3edc9, #cfe4e9);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Sum Of All Fears</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/Solve.html">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/campingtomz/sumofall" target="_blank" ">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://tz-coderfoundry-portfolio.netlify.app/" target="_blank">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="example" class="container">
+        <div class="row">
+            <div id="example-list" class="col-lg-12 text-center">
+                <h1 class="mt-5">Sum Of All Fears Exercise</h1>
+                <p class="lead">or Palindrome Exercise</p>
+                <ul class="list-unstyled">
+                    <li>This Exercise takes a user input and returns whether any two numbers from the list add up to it.</li>
+                    <li>Example if the list contains [10, 15, 3, 7]</li>
+                    <li>If the user would enter 17, then the program would return frue.</li>
+                    <li>10 + 7 = 17</li>
+                    <li>If the user enters 14, the program returns false, as no combination of the list values = 14.</li>
+                    <li>There are several ways to build an algorithm for this problem:</li>
+                    <li>The brute force method would be to have a nested loop iterate throw the list.</li>
+                    <li>
+                        <pre class="language-javascript">
+                            <code class="language-javascript">
+                            userinput = k;
+                            for(i = 0; i < array.length; i++){
+                                value = array[i];
+                                for(k = i+1; k < array.length; k++){
+                                    if(userinput - value === array[k]){
+                                        return true;
+                                    }
+                                }
+                            }
+                            return false;
+                            </code>
+                        </pre>
+                    </li>
+                    <li>More examples can be found here: </li>
+                    <a href="https://www2.cs.arizona.edu/icon/oddsends/palinsen.htm" target="_blank">click here</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img id="tacocatbackground" src="img/tacocat.jpg" alt="tacocat">
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="script/prism.js"></script>
+    <script src="solve.js"></script>
+</body>
+
+</html>
