@@ -16,6 +16,10 @@
         body {
             background-image: linear-gradient(to left, #f3edc9, #cfe4e9);
         }
+        input[type=range]::-webkit-slider-runnable-track {
+            background: black;
+        }
+
     </style>
 </head>
 
@@ -81,43 +85,49 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">Randomize Input (will generate a value 1-100)</label>
+                            <input class="form-check-input" type="checkbox" value="" id="randomInputCheck">
+                            <label class="form-check-label" for="randomInputCheck">Randomize Input (will generate a value 1-100)</label>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group row">
-                        <label for="userValueInput" class="col-sm-4 col-form-label">User Array Input</label>
+                        <label for="userArrayInput" class="col-sm-4 col-form-label">User Array Input</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="userValueInput" />
+                            <input type="text" class="form-control" id="userArrayInput" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">Randomize Array Input (will generate an array of numbers)</label>
+                            <input class="form-check-input" type="checkbox" value="" id="randomArrayCheck">
+                            <label class="form-check-label" for="randomArrayCheck">Randomize Array Input (will generate an array of numbers)</label>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-6">
-                            <input type="range" class="custom-range" min="10" max="100" id="arrayRange">
+                        <label class="form-check-label" for="arrayRange">Choose a custom length for the array.(default is 50)</label>
+
+                        <div class="col-sm-9">
+
+                            <input type="range" class="custom-range" value="50" min="10" max="100" id="arrayRange" disabled>
 
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <span class="font-weight-bold text-primary ml-2 mt-1 valueSpan"></span>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <label for="maxValueInput" class=" col-form-label">Enter a custom value for the Max value (Other wise the default Value is 100).</label>
-                            <input type="text" class="col-sm-2 form-control" value="100" placeholder="100"id="maxValueInput" />
+                            <label for="maxValueInput" class=" col-form-label">Enter a custom value for the possible max value (Other wise the default Value is 100).</label>
+                            <input type="text" class="col-sm-2 form-control" value="100" placeholder="100"id="maxValueInput" disabled/>
                             </div>
                     </div>
                 </div>
+                </div>
         </form>
     </div>
+    <div class="container" id="outputValues">
 
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
