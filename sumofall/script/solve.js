@@ -12,7 +12,11 @@ $value.on('input change', barValueChange);
 let dataOutPut;
 $('#randomInputCheck').change(checkBoxInput);
 $('#randomArrayCheck').change(checkBoxArray);
-$('#showMoreBtn').click()
+$('#showMoreBtn').click(function () {
+    $('#outputText').hide();
+    $('#showMoreBtn').hide();
+    $('#outputList').show();
+});
 $('#maxValueInput').change(function () {
     generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val());
 });
@@ -76,9 +80,6 @@ function generateRandomArray( maxValue, maxLength) {
     $('#userArrayInput').attr("placeholder", numberArray);
     return numberArray;
 }
-function validDateInout() {
-    let inputArray = $('#userArrayInput').val().split(",");
-}
 function findValue() {
     let sumOf = parseInt($('#userValueInput').val());
     let searchArray = new Set($('#userArrayInput').val().split(",").filter((num) => { return num < sumOf }).map((num) => { return parseFloat(num) }));
@@ -100,14 +101,12 @@ function outPutArray(searchSet, sumOf) {
     return outPut;
 }
 function outPutData(outPutValues, sumOf) {
-    $('#outputText').text(`Values that when added to gether equal ${sumOf}`);
+    $('#outputText').html(`The first Values that when added to gether equal ${sumOf}<br/>The numbers ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}`);
+    //$('#outputValues').append(`<p id="displayFirst">The numbers ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}</p>`);
+    $('#outputList').append(`All the Values that when added to gether equal ${sumOf}`);
     for (value of outPutValues) {
-        $('#outputList').append(`<li> The numbers ${value.firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}</il>`);
+        $('#outputList').append(`<li> The numbers ${value.firstNum} and ${value.secondNum} when added together = ${sumOf}</il>`);
 
     }
-    //$('#outputList').html(`<li> The numbers ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}</il>`);
     $('#showMoreBtn').show();
-}
-function generateHtml() {
-
 }
