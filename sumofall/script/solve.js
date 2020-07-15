@@ -23,7 +23,13 @@ $('#maxValueInput').change(function () {
 $('#arrayRange').change(function () {
     generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val());
 });
-$('#submit').click(findValue);
+$('#submit').click(function () {
+    $('#outputText').empty();
+    $('#outputList').hide();
+    $('#outputText').show();
+    $('#outputList').empty();
+    findValue();
+});
 
 function barValueChange() {
 
@@ -40,7 +46,6 @@ function checkBoxArray() {
         $('#userArrayInput').prop("disabled", false);
         $('#arrayRange').prop("disabled", true);
         $('#maxValueInput').prop("disabled", true);
-        array = [];
         $('#userArrayInput').val("");
         $('#userArrayInput').attr("placeholder", '');
         $('#maxValueInput').prop("disabled", true);
@@ -81,9 +86,14 @@ function generateRandomArray( maxValue, maxLength) {
     return numberArray;
 }
 function findValue() {
+    if (!$('#userValueInput').val()) {
+        $('#userValueInput').val(getRandomNumber($('#maxValueInput').val()));
+    }
+    if (!$('#userArrayInput').val()) {
+        $('#userArrayInput').val(generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val()));
+    } 
     let sumOf = parseInt($('#userValueInput').val());
     let searchArray = new Set($('#userArrayInput').val().split(",").filter((num) => { return num < sumOf }).map((num) => { return parseFloat(num) }));
-    console.log(searchArray);
     let valuesGreaterSumOf = $('#arrayRange').val() - searchArray.length;
     let duplicteCount = valuesGreaterSumOf - searchArray.length;
     dataOutPut = outPutArray(searchArray, sumOf);
