@@ -8,10 +8,11 @@
     const $value = $('#arrayRange');
     $valueSpan.html($value.val());
 $value.on('input change', barValueChange);
-let inputValue;
+//let inputValue;
+let dataOutPut;
 $('#randomInputCheck').change(checkBoxInput);
 $('#randomArrayCheck').change(checkBoxArray);
-//$('#arrayRange').on('input change', checkBoxArray);
+
 $('#maxValueInput').change(function () {
     generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val());
 });
@@ -79,6 +80,9 @@ function generateRandomArray( maxValue, maxLength) {
 function findValue() {
     let sumOf = parseInt($('#userValueInput').val());
     let searchArray = new Set($('#userArrayInput').val().split(",").filter((num) => { return num < sumOf }).map((num) => { return parseInt(num) }));
+    let duplicteCount = $('#arrayRange').val() - searchArray.length;
+    dataOutPut = outPutArray(searchArray, sumOf);
+    outPutData(dataOutPut, sumOf);
 }
 function outPutArray(searchSet, sumOf) {
     outPut = [];
@@ -90,4 +94,10 @@ function outPutArray(searchSet, sumOf) {
         }
     }
     return outPut;
+}
+function outPutData(outPutValues, sumOf) {
+    $('#outputList').html(`
+        <li> The value ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}
+        </il>
+    `);
 }
