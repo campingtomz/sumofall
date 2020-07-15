@@ -16,10 +16,10 @@
         body {
             background-image: linear-gradient(to left, #f3edc9, #cfe4e9);
         }
+
         input[type=range]::-webkit-slider-runnable-track {
             background: black;
         }
-
     </style>
 </head>
 
@@ -89,6 +89,11 @@
                             <label class="form-check-label" for="randomInputCheck">Randomize Input (will generate a value 1-100)</label>
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <button id="submit" type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group row">
@@ -102,6 +107,7 @@
                             <input class="form-check-input" type="checkbox" value="" id="randomArrayCheck">
                             <label class="form-check-label" for="randomArrayCheck">Randomize Array Input (will generate an array of numbers)</label>
                         </div>
+
                     </div>
                     <div class="form-group row">
                         <label class="form-check-label" for="arrayRange">Choose a custom length for the array.(default is 50)</label>
@@ -118,11 +124,11 @@
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <label for="maxValueInput" class=" col-form-label">Enter a custom value for the possible max value (Other wise the default Value is 100).</label>
-                            <input type="text" class="col-sm-2 form-control" value="100" placeholder="100"id="maxValueInput" disabled/>
-                            </div>
+                            <input type="text" class="col-sm-2 form-control" value="100" placeholder="100" id="maxValueInput" disabled />
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </form>
     </div>
     <div class="container" id="outputValues">

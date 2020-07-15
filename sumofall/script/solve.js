@@ -1,12 +1,13 @@
-﻿
+﻿function Value(firstNum, secondNum) {
+    this.firstNum = firstNum;
+    this.secondNum = secondNum;
+
+};
 
     const $valueSpan = $('.valueSpan');
     const $value = $('#arrayRange');
     $valueSpan.html($value.val());
 $value.on('input change', barValueChange);
-    
-
-let array = [];
 let inputValue;
 $('#randomInputCheck').change(checkBoxInput);
 $('#randomArrayCheck').change(checkBoxArray);
@@ -17,6 +18,7 @@ $('#maxValueInput').change(function () {
 $('#arrayRange').change(function () {
     generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val());
 });
+$('#submit').click(findValue);
 
 function barValueChange() {
 
@@ -27,7 +29,7 @@ function checkBoxArray() {
         $('#userArrayInput').prop("disabled", true);
         $('#arrayRange').prop("disabled", false);
         $('#maxValueInput').prop("disabled", false);
-        array = generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val());
+        $('#userArrayInput').val(generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val()));
     }
     else {
         $('#userArrayInput').prop("disabled", false);
@@ -44,11 +46,10 @@ function checkBoxArray() {
 
     }
 };
-
 function checkBoxInput() {
     if (this.checked) {
         $('#userValueInput').prop("disabled", true);
-        inputValue = getRandomNumber($('#maxValueInput').val())      
+        $('#userValueInput').val(getRandomNumber($('#maxValueInput').val())); 
     }
     else {
         $('#userValueInput').val("");
@@ -61,9 +62,6 @@ function getRandomNumber() {
     $('#userValueInput').val(randomValue);
     $('#userValueInput').attr("placeholder", randomValue);
     return randomValue;
-}
-function generateRandomArray() {
-    let randomValue = generateRandomNumber($('#maxValueInput').val())
 }
 function generateRandomNumber(maxValue) {
     return (Math.floor(Math.random() * maxValue));
@@ -78,4 +76,18 @@ function generateRandomArray( maxValue, maxLength) {
     return numberArray;
 }
 
-function 
+function findValue() {
+    let sumOf = parseInt($('#userValueInput').val());
+    let searchArray = new Set($('#userArrayInput').val().split(",").filter((num) => { return num < sumOf }).map((num) => { return parseInt(num) }));
+}
+function outPutArray(searchSet, sumOf) {
+    outPut = [];
+    for (num of searchSet) {
+        console.log(sumOf, num);
+        if (searchSet.has(sumOf - num)) {
+            outPut.push(new Value(num, sumOf - num));
+            searchSet.delete(num);
+        }
+    }
+    return outPut;
+}
