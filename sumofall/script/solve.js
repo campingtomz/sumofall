@@ -3,10 +3,8 @@
     const $valueSpan = $('.valueSpan');
     const $value = $('#arrayRange');
     $valueSpan.html($value.val());
-    $value.on('input change', () => {
-
-        $valueSpan.html($value.val());
-    });
+$value.on('input change', barValueChange);
+    
 
 let array = [];
 let inputValue;
@@ -20,7 +18,10 @@ $('#arrayRange').change(function () {
     generateRandomArray($('#maxValueInput').val(), $('#arrayRange').val());
 });
 
+function barValueChange() {
 
+    $valueSpan.html($value.val());
+};
 function checkBoxArray() {
     if (this.checked) {
         $('#userArrayInput').prop("disabled", true);
@@ -35,6 +36,12 @@ function checkBoxArray() {
         array = [];
         $('#userArrayInput').val("");
         $('#userArrayInput').attr("placeholder", '');
+        $('#maxValueInput').prop("disabled", true);
+        $('#maxValueInput').val("100");
+        $('#maxValueInput').attr("placeholder", '100');
+        $('#arrayRange').val('50');
+        barValueChange();
+
     }
 };
 
@@ -70,3 +77,5 @@ function generateRandomArray( maxValue, maxLength) {
     $('#userArrayInput').attr("placeholder", numberArray);
     return numberArray;
 }
+
+function 
