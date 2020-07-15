@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
     <Content Include="css\prism.css" />
+    <Content Include="css\style.css" />
     <Content Include="html\Code.html" />
     <Content Include="html\Solve.html" />
     <Content Include="Index.html" />
