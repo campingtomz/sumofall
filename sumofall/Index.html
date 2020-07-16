@@ -16,6 +16,7 @@
     <link href="../style/bootstrap.css" rel="stylesheet" />
     <link href="css/prism.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/textAnimation.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -56,21 +57,26 @@
 
     <!-- Page Content -->
     <div id="example" class="container">
-        <div class="row">
-            <div id="example-list" class="col-lg-12 text-center">
+        <div class="row justify-content-center">
+            <div id="example-list" class="col-lg-8 text-center">
                 <h1 class="mt-5">Sum Of All Fears Exercise</h1>
-                <p class="lead">or Palindrome Exercise</p>
                 <ul class="list-unstyled">
                     <li>This Exercise takes a user input and returns whether any two numbers from the list add up to it.</li>
                     <li>Example if the list contains [10, 15, 3, 7]</li>
-                    <li>If the user would enter 17, then the program would return frue.</li>
+                    <li>If the user would enter 17, then the program would return true.</li>
                     <li>10 + 7 = 17</li>
                     <li>If the user enters 14, the program returns false, as no combination of the list values = 14.</li>
                     <li>There are several ways to build an algorithm for this problem:</li>
-                    <li>The brute force method would be to have a nested loop iterate throw the list.</li>
-                    <li>
-                        <pre class="language-javascript">
-                            <code class="language-javascript">
+                    <li>The brute force method would be to have a nested loop iterate through the list.</li>
+                    <li>More examples can be found here: <a href="https://www2.cs.arizona.edu/icon/oddsends/palinsen.htm" target="_blank">click here</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <pre class="language-javascript">
+                <code id="codesnip-display" class="language-javascript">
                             userinput = k;
                             for(i = 0; i < array.length; i++){
                                 value = array[i];
@@ -83,14 +89,12 @@
                             return false;
                             </code>
                         </pre>
-                    </li>
-                    <li>More examples can be found here: </li>
-                    <a href="https://www2.cs.arizona.edu/icon/oddsends/palinsen.htm" target="_blank">click here</a>
-                </ul>
             </div>
         </div>
+        <div class="col-lg-8">
+        </div>
     </div>
-    
+
 
 
 

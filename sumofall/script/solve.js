@@ -111,11 +111,11 @@ function outPutArray(searchSet, sumOf) {
     return outPut;
 }
 function outPutData(outPutValues, sumOf) {
-    $('#outputText').html(`The first Values that when added to gether equal ${sumOf}<br/>The numbers ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}`);
+    $('#outputText').html(`The first Values that when added together equal ${sumOf}<br/>The numbers ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together equal ${sumOf}`);
     //$('#outputValues').append(`<p id="displayFirst">The numbers ${outPutValues[0].firstNum} and ${outPutValues[0].secondNum} when added together = ${sumOf}</p>`);
-    $('#outputList').append(`All the Values that when added to gether equal ${sumOf}`);
+    $('#outputList').append(`All the Values that when added together equal ${sumOf}`);
     for (value of outPutValues) {
-        $('#outputList').append(`<li> The numbers ${value.firstNum} and ${value.secondNum} when added together = ${sumOf}</il>`);
+        $('#outputList').append(`<li> The numbers ${value.firstNum} and ${value.secondNum} when added together equal ${sumOf}</il>`);
 
     }
     $('#showMoreBtn').show();
