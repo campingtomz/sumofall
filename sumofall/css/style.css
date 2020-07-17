@@ -1,25 +1,6 @@
 ﻿body {
     background-image: linear-gradient(to left, #f3edc9, #cfe4e9);
 }
-#output-index {
-    display: inline;
-}
-
-#output-code {
-    display: none;
-}
-
-#output-solve {
-    display: none;
-}
-
-#output-solvejs {
-    display: none;
-}
-
-#output-codejs {
-    display: none;
-}
 #example-list {
     background-color: tan;
 }

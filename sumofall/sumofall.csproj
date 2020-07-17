@@ -73,9 +73,9 @@
     <Content Include="css\textAnimation.css" />
     <Content Include="html\Code.html" />
     <Content Include="html\Solve.html" />
+    <Content Include="img\zanis-logo.png" />
     <Content Include="Index.html" />
     <Content Include="script\bootstrap.js" />
-    <Content Include="script\code.js" />
     <Content Include="script\jquery-3.5.1.min.js" />
     <Content Include="script\prism.js" />
     <Content Include="script\solve.js" />

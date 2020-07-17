@@ -52,7 +52,6 @@ C:\Users\campi\Documents\GitHub\sumofall\sumofall\bin\roslyn\VBCSCompiler.exe
 C:\Users\campi\Documents\GitHub\sumofall\sumofall\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\campi\Documents\GitHub\sumofall\sumofall\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\campi\Documents\GitHub\sumofall\sumofall\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\campi\Documents\GitHub\sumofall\sumofall\obj\Debug\sumofall.csprojAssemblyReference.cache
 C:\Users\campi\Documents\GitHub\sumofall\sumofall\obj\Debug\sumofall.csproj.CoreCompileInputs.cache
 C:\Users\campi\Documents\GitHub\sumofall\sumofall\obj\Debug\sumofall.csproj.CopyComplete
 C:\Users\campi\Documents\GitHub\sumofall\sumofall\obj\Debug\sumofall.dll
